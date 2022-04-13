@@ -1,0 +1,9 @@
+<div class="wrapper" [@slowSlide]>
+
+    <h1><strong>{{name$ | async}}</strong>, your score is <strong>{{score$ | async}}</strong> out of <strong>{{amount}}</strong></h1>
+
+    <button (click)="retry()" class="btn btn-light">
+      Try Again
+    </button>
+
+</div>

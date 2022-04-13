@@ -1,0 +1,8 @@
+<ng-container *ngIf="!showTriviaOptions">
+    <app-user-info [formGroup]="userInfoForm" (submitted)="userInfoSubmitted()"></app-user-info>
+</ng-container>
+
+<ng-container *ngIf="showTriviaOptions">
+    <app-trivia-options [formGroup]="optionsForm" (submitted)="startTrivia()" (goBack)="backToUserInfo()" [name]="name$ | async">
+    </app-trivia-options>
+</ng-container>
